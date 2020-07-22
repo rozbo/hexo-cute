@@ -4,7 +4,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:rozbo/hexo-neat.git"
+    "url": "git@github.com:rozbo/hexo-cute.git"
   },
   "dependencies": {
     "bluebird": "^3.7.2",
@@ -27,11 +27,11 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "name": "hexo-neat",
+  "name": "hexo-cute",
   "optionalDependencies": {},
   "readme": "ERROR: No README data found!",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.9"
+  "version": "1.0.0"
 }
