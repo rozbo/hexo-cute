@@ -30,6 +30,7 @@ cute:
   js: 
     enable: true
     #.....
+```
 ## Sponsor
 The project is develop by [JetBrains Ide](https://www.jetbrains.com/?from=puck)
 
