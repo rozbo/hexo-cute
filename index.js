@@ -80,13 +80,13 @@ function before_generate(ctx, args) {
 }
 function after_generate(ctx, args) {
     const logger = ctx.log || console;
+    fs.writeFile = old;
     logger.info('bye from hexo-cute');
 }
 
 hexo.extend.filter.register('after_init', function () {
     const logger = this.log || console;
     before_generate_time = Date.now();
-    console.log(before_generate_time);
     logger.log('now we install the diy hooks before_generate and after_generate');
     const generateConsole = this.extend.console.store['generate'];
     const newGenerateConsole = (args) => {
@@ -103,23 +103,5 @@ hexo.extend.filter.register('after_init', function () {
     };
     newGenerateConsole.options = generateConsole.options;
     newGenerateConsole.desc = generateConsole.desc;
-
     this.extend.console.store['generate'] = newGenerateConsole;
 });
-// hexo.extend.filter.register('before_generate', function () {
-//     before_generate = Date.now();
-//     before_generate = Date.now();
-//     logger.log('now we start after_init:', before_generate);
-//     const classGenerate = this.extend.console.store['generate'];
-//     console.log(classGenerate.prototype);
-//     logger.log('now we start generate:', before_generate);
-// });
-// hexo.extend.filter.register('after_generate', function () {
-//     const logger = this.log || console;
-//     const after_generate = Date.now();
-//     before_generate = Date.now();
-//     logger.log('now we start after_init:', before_generate);
-//     const classGenerate = this.extend.console.store['generate'];
-//     console.log(classGenerate.prototype);
-//     logger.log('now we finish generate in %d ms', after_generate - before_generate);
-// });
