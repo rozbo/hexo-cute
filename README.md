@@ -1,67 +1,35 @@
 # status
-[![npm version](https://badge.fury.io/js/hexo-neat.svg)](https://badge.fury.io/js/hexo-neat)
+[![npm version](https://badge.fury.io/js/hexo-cute.svg)](https://badge.fury.io/js/hexo-cute)
 
-# Hexo-neat
+# Hexo-cute
 
-I want a perfect page to show for my blog, so I made this.
+I want a perfect page to show for my blog, so I made [this plugin](https://github.com/rozbo/hexo-neat), but one day some guys said it was too slow
+[https://github.com/rozbo/hexo-neat/issues/13](https://github.com/rozbo/hexo-neat/issues/13), and I try to fix it, but I can't, hexo
+doest provide any api to get the resource that changed.
+I have tried many methods, including reading the database, comparing hashes myself, etc., but the coupling in this place is so high that we have no chance to intervene.
+
+Finally, as a last resort, I used this solution, monkey patch, which is hooked by myself and is not officially supported by hexo. To make matters worse, with the hexo update, this scheme may fail. So the risk is controlled by yourself.
 
 ## Installation
 ``` bash
-$ npm install hexo-neat --save
+$ npm install hexo-cute --save
 ```
 
 
 ## Options
 To Enable Auto neat , you must config like this:
 ``` yaml
-neat_enable: true
-```
-
-``` yaml
-neat_html:
+cute:
   enable: true
-  exclude:
-```
-- **enable** - Enable the plugin. Defaults to `true`.
-- **logger** - Print log switch. Defaults to `true`.
-- **exclude**: Exclude files
-- **Note:** there are so many params please see [HTMLMinifier](https://github.com/kangax/html-minifier)
-----------
-
-``` yaml
-neat_css:
-  enable: true
-  exclude:
-    - '*.min.css'
-```
-- **enable** - Enable the plugin. Defaults to `true`.
-- **logger** - Print log switch. Defaults to `true`.
-- **exclude**: Exclude files
-- **Note:** there are so many params please see [clean-css](https://github.com/jakubpawlowicz/clean-css)
-----------
-
-``` yaml
-neat_js:
-  enable: true
-  mangle: true
-  output:
-  compress:
-  exclude:
-    - '*.min.js'
-```
-- **enable** - Enable the plugin. Defaults to `true`.
-- **mangle**: Mangle file names
-- **logger** - Print log switch. Defaults to `true`.
-- **output**: Output options
-- **compress**: Compress options
-- **exclude**: Exclude files
-- **Note:** there are so many params please see [UglifyJS](http://lisperator.net/uglifyjs/)
-
-## Thanks
-Say Very Thanks for this gays:
-- neat `html` by [HTMLMinifier](https://github.com/kangax/html-minifier)
-- neat `css`  by [clean-css](https://github.com/jakubpawlowicz/clean-css)
-- neat `js`   by  [UglifyJS](http://lisperator.net/uglifyjs/)
+  html:
+    enable: true
+    #....
+  css: 
+    enable: true
+    #.....
+  js: 
+    enable: true
+    #.....
 ## Sponsor
 The project is develop by [JetBrains Ide](https://www.jetbrains.com/?from=puck)
 
