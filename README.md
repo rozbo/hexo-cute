@@ -1,6 +1,8 @@
 # status
 [![npm version](https://badge.fury.io/js/hexo-cute.svg)](https://badge.fury.io/js/hexo-cute)
-
+[![npm](https://img.shields.io/npm/dy/hexo-cute.svg)](https://www.npmjs.com/package/hexo-cute)
+[![npm](https://img.shields.io/npm/dm/hexo-cute.svg)](https://www.npmjs.com/package/hexo-cute)
+[![npm](https://img.shields.io/npm/dt/hexo-cute.svg)](https://www.npmjs.con/pacage/hexo-cute)
 # Hexo-cute
 
 I want a perfect page to show for my blog, so I made [this plugin](https://github.com/rozbo/hexo-neat), but one day some guys said it was too slow
